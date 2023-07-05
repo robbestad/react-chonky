@@ -80,6 +80,19 @@ export const DefaultActions = {
     }) as FileSelectionTransform,
   } as const),
   /**
+   * Action that clear the file selection.
+   */
+  CreatFolder: defineFileAction({
+    id: 'create_folder',
+    button: {
+      name: 'Create Folder',
+      toolbar: true,
+      contextMenu: true,
+      group: 'Actions',
+      icon: ChonkyIconName.folderCreate,
+    }
+  } as const),
+  /**
    * Action that enables List view.
    */
   EnableListView: defineFileAction({

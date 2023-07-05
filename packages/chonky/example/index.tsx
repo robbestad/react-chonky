@@ -14,7 +14,7 @@ const App = () => {
           name,
         }))}
         files={[
-          { id: 'zxc', name: 'My File.txt' },
+          { id: 'z<xc', name: 'My File with a very long name and also with a nice preview.txt' },
           { id: 'jre', name: 'My Folder' },
         ]}
       />

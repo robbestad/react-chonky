@@ -9,7 +9,8 @@
 node_modules/
 /.pnp
 .pnp.js
-
+.yarn
+packages/chonky/example/.yarn/
 # Lerna
 lerna-*.log
 
