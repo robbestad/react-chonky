@@ -82,7 +82,7 @@ export const DefaultActions = {
   /**
    * Action that clear the file selection.
    */
-  CreatFolder: defineFileAction({
+  CreateFolder: defineFileAction({
     id: 'create_folder',
     button: {
       name: 'Create Folder',
@@ -91,7 +91,8 @@ export const DefaultActions = {
       group: 'Actions',
       icon: ChonkyIconName.folderCreate,
     }
-  } as const),
+  } as const),  
+/**
   /**
    * Action that enables List view.
    */
@@ -195,6 +196,7 @@ export const DefaultActions = {
       group: 'Options',
     },
   } as const),
+  
   /**
    * Action that toggles whether folders should appear before files regardless of
    * current sort function.

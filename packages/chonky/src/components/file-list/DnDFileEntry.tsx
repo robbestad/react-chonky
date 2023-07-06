@@ -16,18 +16,21 @@ export const DnDFileEntry = React.memo(({ file, children }: DnDFileEntryProps) =
   const { drop, drag, dndState } = useFileEntryDnD(file);
 
   useDndHoverOpen(file, dndState);
-  const classes = useStyles();
   return (
-    <div ref={drop} className={classes.fillParent}>
-      <div ref={FileHelper.isDraggable(file) ? drag : null} className={classes.fillParent}>
+    <div ref={drop} style={{
+        height: '100%',
+    }}>
+      <div ref={FileHelper.isDraggable(file) ? drag : null} style={{
+        height: '100%',
+    }}>
         {children(dndState)}
       </div>
     </div>
   );
 });
 
-export const useStyles = makeLocalChonkyStyles(() => ({
+export const useStyles =  ({
   fillParent: {
     height: '100%',
   },
-}));
+});

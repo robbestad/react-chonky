@@ -19,12 +19,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aperturerobotics/chonky-icon-fontawesome@workspace:packages/chonky-icon-fontawesome"
   dependencies:
-    "@aperturerobotics/chonky": ^0.2.2
     "@fortawesome/fontawesome-svg-core": ^6.3.0
     "@fortawesome/free-brands-svg-icons": 6.3.0
     "@fortawesome/free-solid-svg-icons": ^6.3.0
     "@fortawesome/react-fontawesome": ^0.2.0
     "@size-limit/preset-small-lib": ^8.2.4
+    "@svenardo/chonky": ^0.2.7
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     dts-cli: ^1.6.3
@@ -32,61 +32,6 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     size-limit: ^8.2.4
-    tslib: ^2.5.0
-    typescript: ^5.0.0
-  peerDependencies:
-    react: ">=16"
-  languageName: unknown
-  linkType: soft
-
-"@aperturerobotics/chonky@^0.2.2, @aperturerobotics/chonky@workspace:packages/chonky":
-  version: 0.0.0-use.local
-  resolution: "@aperturerobotics/chonky@workspace:packages/chonky"
-  dependencies:
-    "@babel/core": ^7.21.0
-    "@emotion/react": ^11.10.6
-    "@emotion/styled": ^11.10.6
-    "@mui/material": ^5.11.12
-    "@mui/styles": ^5.11.12
-    "@reduxjs/toolkit": ^1.9.3
-    "@size-limit/preset-small-lib": ^8.2.4
-    "@testing-library/react": ^14.0.0
-    "@types/classnames": ^2.2.11
-    "@types/fuzzy-search": ^2.1.0
-    "@types/memoizee": ^0.4.5
-    "@types/react": ^18.0.28
-    "@types/react-dom": ^18.0.11
-    "@types/react-redux": ^7.1.25
-    "@types/react-virtualized-auto-sizer": ^1.0.0
-    "@types/react-window": ^1.8.2
-    "@types/redux-watch": ^1.1.0
-    "@types/shortid": ^0.0.29
-    babel-loader: ^9.1.2
-    classnames: ^2.2.6
-    deepmerge: ^4.3.0
-    dts-cli: ^1.6.3
-    exact-trie: ^1.0.13
-    fast-sort: ^3.2.1
-    filesize: ^10.0.6
-    fuzzy-search: ^3.2.1
-    hotkeys-js: ^3.8.3
-    husky: ^8.0.3
-    immer: 9.0.21
-    prettier: ^2.8.4
-    react: ^18.2.0
-    react-dnd: 16.0.1
-    react-dnd-html5-backend: 16.0.1
-    react-dom: ^18.2.0
-    react-intl: ^6.2.10
-    react-is: ^18.2.0
-    react-jss: ^10.10.0
-    react-redux: ^8.0.5
-    react-virtualized-auto-sizer: ^1.0.5
-    react-window: ^1.8.6
-    redux-watch: ^1.2.0
-    shortid: ^2.2.16
-    size-limit: ^8.2.4
-    tsdef: ^0.0.14
     tslib: ^2.5.0
     typescript: ^5.0.0
   peerDependencies:
@@ -2713,6 +2658,61 @@ __metadata:
   checksum: ecb421bf1fc41e6f6b1ab1b54bc1ad22b9214bc8fedb280630e0e9ba3f750a5d91dff18e1db44208b39ccac0f80949236213587c453013956feb3c19a8b353da
   languageName: node
   linkType: hard
+
+"@svenardo/chonky@^0.2.7, @svenardo/chonky@workspace:packages/chonky":
+  version: 0.0.0-use.local
+  resolution: "@svenardo/chonky@workspace:packages/chonky"
+  dependencies:
+    "@babel/core": ^7.21.0
+    "@emotion/react": ^11.10.6
+    "@emotion/styled": ^11.10.6
+    "@mui/material": ^5.11.12
+    "@mui/styles": ^5.11.12
+    "@reduxjs/toolkit": ^1.9.3
+    "@size-limit/preset-small-lib": ^8.2.4
+    "@testing-library/react": ^14.0.0
+    "@types/classnames": ^2.2.11
+    "@types/fuzzy-search": ^2.1.0
+    "@types/memoizee": ^0.4.5
+    "@types/react": ^18.0.28
+    "@types/react-dom": ^18.0.11
+    "@types/react-redux": ^7.1.25
+    "@types/react-virtualized-auto-sizer": ^1.0.0
+    "@types/react-window": ^1.8.2
+    "@types/redux-watch": ^1.1.0
+    "@types/shortid": ^0.0.29
+    babel-loader: ^9.1.2
+    classnames: ^2.2.6
+    deepmerge: ^4.3.0
+    dts-cli: ^1.6.3
+    exact-trie: ^1.0.13
+    fast-sort: ^3.2.1
+    filesize: ^10.0.6
+    fuzzy-search: ^3.2.1
+    hotkeys-js: ^3.8.3
+    husky: ^8.0.3
+    immer: 9.0.21
+    prettier: ^2.8.4
+    react: ^18.2.0
+    react-dnd: 16.0.1
+    react-dnd-html5-backend: 16.0.1
+    react-dom: ^18.2.0
+    react-intl: ^6.2.10
+    react-is: ^18.2.0
+    react-jss: ^10.10.0
+    react-redux: ^8.0.5
+    react-virtualized-auto-sizer: ^1.0.5
+    react-window: ^1.8.6
+    redux-watch: ^1.2.0
+    shortid: ^2.2.16
+    size-limit: ^8.2.4
+    tsdef: ^0.0.14
+    tslib: ^2.5.0
+    typescript: ^5.0.0
+  peerDependencies:
+    react: ">=16"
+  languageName: unknown
+  linkType: soft
 
 "@testing-library/dom@npm:^9.0.0":
   version: 9.0.0

@@ -42,7 +42,7 @@ export const ListEntry: React.FC<FileEntryProps> = React.memo(({ file, selected,
         />
       </div>
       <div className={classes.listFileEntryName} title={file ? file.name : undefined}>
-        <FileEntryName file={file} />
+        <FileEntryName file={file} shortenFileName={false} />
       </div>
       <div className={classes.listFileEntryProperty}>
         {file ? fileModDateString ?? <span>—</span> : <TextPlaceholder minLength={5} maxLength={15} />}

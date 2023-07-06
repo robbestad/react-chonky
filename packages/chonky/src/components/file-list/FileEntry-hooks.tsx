@@ -90,26 +90,52 @@ const _extname = (fileName: string) => {
   return '';
 };
 
-export const useFileNameComponent = (file: Nullable<FileData>) => {
+export const useFileNameComponent = (file: Nullable<FileData>, shortenFileName: boolean) => {
   return useMemo(() => {
     if (!file) return <TextPlaceholder minLength={15} maxLength={20} />;
-
     let name;
-    let extension = null;
+    let ext = null;
 
     const isDir = FileHelper.isDirectory(file as FileData);
-    if (isDir) {
-      name = file.name;
-    } else {
-      extension = file.ext ?? _extname(file.name);
-      name = file.name.substring(0, file.name.length - extension.length);
-    }
+    name = file.name;
+    ext = file.ext;
+    let addEllipsis = false;
+    if(name.length > 23 && shortenFileName) addEllipsis = true;
+    if(addEllipsis) name = name.substring(0, 23)+"...";
+    if(addEllipsis) ext = "";
 
     return (
       <>
-        {name}
-        {extension && <span className="chonky-file-entry-description-title-extension">{extension}</span>}
+        {name ? name: null}
+        {!isDir ? ext && <span className="chonky-file-entry-description-title-extension">{ext}</span>:null}
       </>
+    );
+  }, [file]);
+};
+
+export const useLabelComponent = (file: Nullable<FileData>) => {
+  return useMemo(() => {
+    if (!file) return <TextPlaceholder minLength={15} maxLength={20} />;
+    let labels = [];
+    labels = file.labels;
+    if(!labels) return null;
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const labelStyles: React.CSSProperties = {
+      display: 'inline-flex',
+      pointerEvents: 'none',
+      backgroundColor: prefersDarkMode ? 'rgba(51,51,51,.9)' : 'rgba(241, 241, 241, .9)',
+      color: prefersDarkMode ?  '#f1f1f1': '#333',
+      padding: '0.15rem 0.4rem',
+      borderRadius: '9999px',
+      fontSize: '0.7rem',
+    };
+
+    return (
+      <span style={{padding: "0 .4rem", display: "inline-flex",   alignItems: 'center',
+      justifyContent: 'center', gap: "6px"}}>
+        {labels.map((label:string)=><span key={label} style={labelStyles}>{label}</span>)}
+      </span>
     );
   }, [file]);
 };

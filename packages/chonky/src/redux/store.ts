@@ -23,7 +23,6 @@ export const useChonkyStore = (chonkyInstanceId: string) => {
         getDefaultMiddleware({
           serializableCheck: false,
         }),
-      devTools: { name: `chonky_${chonkyInstanceId}` },
     });
   });
   useStoreWatchers(store);

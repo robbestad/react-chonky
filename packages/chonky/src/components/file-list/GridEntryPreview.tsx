@@ -190,6 +190,8 @@ const useFileStyles = makeLocalChonkyStyles((theme) => ({
   },
 }));
 
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 export const useCommonEntryStyles = makeLocalChonkyStyles(() => ({
   selectionIndicator: {
     display: (state: FileEntryState) => (state.selected ? 'block' : 'none'),
@@ -201,7 +203,7 @@ export const useCommonEntryStyles = makeLocalChonkyStyles(() => ({
       'rgba(0,153,255,.25) 0,' +
       'rgba(0,153,255,.25) 20px' +
       ')',
-    backgroundColor: 'rgba(0, 153, 255, .14)',
+    backgroundColor: prefersDarkMode ?  'rgba(100, 153, 255, .14)': 'rgba(0, 153, 255, .14)',
     position: 'absolute',
     height: '100%',
     width: '100%',
@@ -216,3 +218,5 @@ export const useCommonEntryStyles = makeLocalChonkyStyles(() => ({
     zIndex: 11,
   },
 }));
+
+

@@ -15,7 +15,7 @@ const App = () => {
         }))}
         files={[
           { id: 'z<xc', name: 'My File with a very long name and also with a nice preview.txt' },
-          { id: 'jre', name: 'My Folder' },
+          { id: 'jre', name: 'My Folder', tags: ['folder'], labels: ['HOT STUFF'] },
         ]}
       />
     </div>
