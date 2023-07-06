@@ -203,7 +203,7 @@ export const useCommonEntryStyles = makeLocalChonkyStyles(() => ({
       'rgba(0,153,255,.25) 0,' +
       'rgba(0,153,255,.25) 20px' +
       ')',
-    backgroundColor: prefersDarkMode ?  'rgba(100, 153, 255, .14)': 'rgba(0, 153, 255, .14)',
+    backgroundColor: 'rgba(0, 153, 255, .14)',
     position: 'absolute',
     height: '100%',
     width: '100%',
